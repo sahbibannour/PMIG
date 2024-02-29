@@ -12,7 +12,8 @@ function App() {
         <br/>
         <button type="button" className="button">New Project</button>
         <br/>
-        <button type="button" className="button">Open Project</button>
+        
+        <button type="file" className="button">Open Project</button>
        
         
       </header>

@@ -1,0 +1,10 @@
+{
+    "OBJECT_SRC": "source",
+    "UID_SRC": "SYSADM",
+    "PWD_SRC": "SYSADM",
+    "URI_SRC": "192.168.10.90",
+    "PRT_SRC": "1521",
+    "SID_SRC": "RTXBCC",
+    "x": "pointx",
+    "y": "pointy"
+}
