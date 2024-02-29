@@ -1,8 +1,12 @@
+import cx_Oracle as cx
 
 class BuilderConnectors():
     NAME_LIST_CONNECTION=None
     LIST_CONNECTION=None
-    def __init__(self):
+    LOCALDRIVER=None
+    def __init__(self,x):
+         self.LOCALDRIVER=x
+         cx.init_oracle_client(lib_dir=self.LOCALDRIVER)
          self.NAME_LIST_CONNECTION =[]
          self.LIST_CONNECTION =[]
 

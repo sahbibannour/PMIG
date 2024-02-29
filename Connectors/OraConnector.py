@@ -2,7 +2,6 @@ import cx_Oracle as cx
 
 class OraConnector():
     OBJECT_SRC=None
-    LOCALDRIVER=None
     UID_SRC = None
     PWD_SRC = None
     URI_SRC = None
@@ -11,9 +10,8 @@ class OraConnector():
     DSN=None
     dbconn = None
 
-    def __init__(self,oraclient,name, ip, dbname, port, user, password):
+    def __init__(self,name, ip, dbname, port, user, password):
         self.OBJECT_SRC=name
-        self.LOCALDRIVER=oraclient
         self.UID_SRC = user
         self.PWD_SRC = password
         self.URI_SRC = ip
@@ -25,7 +23,6 @@ class OraConnector():
 
     # creats new connection
     def create_connection(self):
-         cx.init_oracle_client(lib_dir=self.LOCALDRIVER)
          self.DSN = cx.makedsn(self.URI_SRC, self.PRT_SRC, self.SID_SRC)
          self.dbconn=cx.connect(user=self.UID_SRC, password=self.PWD_SRC, dsn=self.DSN, encoding='UTF-8')
          return (self.dbconn)
